@@ -7,6 +7,8 @@ import 'package:e_driving_school/admin/rcrl.dart';
 import 'package:e_driving_school/admin/viewuser.dart';
 import 'package:flutter/material.dart';
 
+import 'comingsoon.dart';
+
 
 
 class adminhome extends StatelessWidget {
@@ -267,7 +269,7 @@ class adminhome extends StatelessWidget {
                       onTap: (){
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => manageinstructor()),
+                          MaterialPageRoute(builder: (context) => comingsoon()),
                         );
                       },
                       child: Container(

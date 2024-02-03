@@ -13,45 +13,38 @@ class _InstructorState extends State<manageinstructor> {
       'title': 'Nabeeh',
       'image': 'assets/userlogo.png',
       'price':'+9',
-      // 'page': ItemDetails(title:'Bun',image:'assets/menu/bun.jpg' ,price:'+9',discription: 'Bun',)
     },
     {
       'title': 'Nabeeh2',
       'image': 'assets/userlogo.png',
       'price':'+9',
-      // 'page': ItemDetails(title:'Bun',image:'assets/menu/bun.jpg' ,price:'+9',discription: 'Bun',)
     },{
       'title': 'Nabeeh3',
       'image': 'assets/userlogo.png',
       'price':'+9',
-      // 'page': ItemDetails(title:'Bun',image:'assets/menu/bun.jpg' ,price:'+9',discription: 'Bun',)
     },
     {
       'title': 'Nabeeh4',
       'image': 'assets/userlogo.png',
       'price':'+9',
-      // 'page': ItemDetails(title:'Bun',image:'assets/menu/bun.jpg' ,price:'+9',discription: 'Bun',)
     },
     {
       'title': 'Nabeeh5',
       'image': 'assets/userlogo.png',
       'price':'+9',
-      // 'page': ItemDetails(title:'Bun',image:'assets/menu/bun.jpg' ,price:'+9',discription: 'Bun',)
     },
     {
       'title': 'Nabeeh6',
       'image': 'assets/userlogo.png',
       'price':'+9',
-      // 'page': ItemDetails(title:'Bun',image:'assets/menu/bun.jpg' ,price:'+9',discription: 'Bun',)
     },
-    ];
+  ];
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-
+        title: Text('Manage Instructors'),
       ),
       body: Column(
         children: [
@@ -79,8 +72,7 @@ class _InstructorState extends State<manageinstructor> {
                   mainAxisSpacing: 10,
                   childAspectRatio: 4.4 / 4,
                 ),
-                itemCount: items.length, // Change itemCount according to your data
-                // itemCount: items.length,
+                itemCount: items.length,
                 itemBuilder: (context, index) {
                   return Container(
                     decoration: BoxDecoration(
@@ -96,7 +88,7 @@ class _InstructorState extends State<manageinstructor> {
                               child: Center(
                                 child: Image.asset(
                                   items[index]['image'],
-                                  fit: BoxFit.cover, // Ensure the image covers the space
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ),
@@ -126,13 +118,18 @@ class _InstructorState extends State<manageinstructor> {
                     ),
                   );
                 },
-
               ),
             ),
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add functionality for the FloatingActionButton here
+          print('FloatingActionButton pressed');
+        },
+        child: Icon(Icons.add),
+      ),
     );
-
   }
 }
